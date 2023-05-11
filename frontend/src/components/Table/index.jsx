@@ -34,43 +34,60 @@ const Table = () => {
 
   return (
     <ContentLayout>
-      <table className="shadow-lg w-[88vw] md:w-[90vw] lg:w-[60vw] text-[12px] md:text-[16px] text-center">
-        <thead className="bg-blue-200">
-          <tr>
-            <th>Nama</th>
-            <th>Kelas</th>
-            <th>Semester</th>
-            <th>Program Studi</th>
-            <th>Nomor WA</th>
-            <th className="text-center">Action</th>
-          </tr>
-        </thead>
-        <tbody className=" bg-slate-200">
-          {users.map((users) => (
-            <tr className="h-[5vh] md:h-[5.5vh] lg:h-[5vh] " key={users.id}>
-              <td>{users.nama}</td>
-              <td>{users.kelas}</td>
-              <td>{users.semester}</td>
-              <td>{users.prodi}</td>
-              <td>{users.wa}</td>
-              <td className="flex justify-evenly items-center text-center mt-2 md:mt-1">
-                <Link
-                  to={`/editData/${users.id}`}
-                  className=" bg-green-500 rounded-md w-[7vw] md:w-[6vw] lg:w-[4vw] hover:bg-green-600 hover:text-slate-200 md:mt-1 lg:mt-0.5"
+      <div className="w-[80vw] md:-[80vw] overflow-hidden rounded-lg shadow-lg">
+        <div className="w-full overflow-x-auto">
+          <table className="w-full text-[15px] text-center">
+            <thead className="bg-blue-500">
+              <tr className="tracking-wide font-semibold text-slate-100 ">
+                <th className="p-2">Nama</th>
+                <th className="p-2">Kelas</th>
+                <th className="p-2">Semester</th>
+                <th className="p-2">Program Studi</th>
+                <th className="p-2">Nomor WA</th>
+                <th className="text-center p-2">Action</th>
+              </tr>
+            </thead>
+            <tbody className=" bg-slate-100">
+              {users.map((users) => (
+                <tr
+                  className="h-[5vh] md:h-[5.5vh] lg:h-[5vh] font-semibold "
+                  key={users.id}
                 >
-                  Edit
-                </Link>
-                <button
-                  className="w-[6vw] md:w-[6vw] lg:w-[4vw] bg-red-500 rounded-md hover:bg-red-600 hover:text-slate-200 md:mt-1 lg:mt-0.5"
-                  onClick={() => deleteUsers(users.id)}
-                >
-                  Del
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                  <td className="border-slate-300 border-r-2 p-2">
+                    {users.nama}
+                  </td>
+                  <td className="border-slate-300 border-r-2 p-2">
+                    {users.kelas}
+                  </td>
+                  <td className="border-slate-300 border-r-2 p-2">
+                    {users.semester}
+                  </td>
+                  <td className="border-slate-300 border-r-2 p-2">
+                    {users.prodi}
+                  </td>
+                  <td className="border-slate-300 border-r-2 p-2">
+                    {users.wa}
+                  </td>
+                  <td className="flex justify-evenly items-center text-center p-5 gap-2 mx-2">
+                    <Link
+                      to={`/editData/${users.id}`}
+                      className=" bg-green-500 rounded-md w-[13vw] md:w-[6vw] lg:w-[4vw] hover:bg-green-600 hover:text-slate-200 md:mt-1 lg:mt-0.5"
+                    >
+                      Edit
+                    </Link>
+                    <button
+                      className="w-[12vw] md:w-[8vw] lg:w-[4vw] bg-red-500 rounded-md hover:bg-red-600 hover:text-slate-200 md:mt-1 lg:mt-0.5"
+                      onClick={() => deleteUsers(users.id)}
+                    >
+                      Del
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </ContentLayout>
   );
 };
