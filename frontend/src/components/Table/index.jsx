@@ -34,7 +34,7 @@ const Table = () => {
 
   return (
     <ContentLayout>
-      <div className="w-[80vw] md:-[80vw] overflow-hidden rounded-lg shadow-lg">
+      <div className="w-[80vw] overflow-hidden rounded-lg shadow-lg">
         <div className="w-full overflow-x-auto">
           <table className="w-full text-[15px] text-center">
             <thead className="bg-blue-500">
