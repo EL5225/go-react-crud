@@ -12,7 +12,7 @@ const Table = () => {
 
   const getUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:9090//api/reads");
+      const response = await axios.get("http://localhost:8000/api/reads");
       console.log(response);
     } catch (error) {
       console.log(error);

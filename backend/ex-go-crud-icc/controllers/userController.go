@@ -7,9 +7,6 @@ import (
 )
 
 func ReadAll(c *fiber.Ctx) error {
-	c.Set("Access-Control-Allow-Origin", "http://localhost:5173")
-	c.Set("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization")
-	c.Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
 	var data []models.User
 
 	config.DB.Find(&data)
@@ -21,9 +18,6 @@ func ReadAll(c *fiber.Ctx) error {
 }
 
 func Read(c *fiber.Ctx) error {
-	c.Set("Access-Control-Allow-Origin", "http://localhost:5173")
-	c.Set("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization")
-	c.Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
 
 	var data models.User
 
@@ -51,10 +45,6 @@ func Read(c *fiber.Ctx) error {
 }
 
 func Create(c *fiber.Ctx) error {
-	c.Set("Access-Control-Allow-Origin", "http://localhost:5173")
-	c.Set("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization")
-	c.Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
-
 	var user = new(models.UserReq)
 
 	if err := c.BodyParser(user); err != nil {
@@ -83,10 +73,6 @@ func Create(c *fiber.Ctx) error {
 }
 
 func Update(c *fiber.Ctx) error {
-	c.Set("Access-Control-Allow-Origin", "http://localhost:5173")
-	c.Set("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization")
-	c.Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
-
 	var user = new(models.UserReq)
 
 	if err := c.BodyParser(user); err != nil {
@@ -124,9 +110,6 @@ func Update(c *fiber.Ctx) error {
 }
 
 func Delete(c *fiber.Ctx) error {
-	c.Set("Access-Control-Allow-Origin", "http://localhost:5173")
-	c.Set("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization")
-	c.Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
 
 	var user models.User
 
