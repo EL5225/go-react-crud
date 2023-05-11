@@ -16,7 +16,7 @@ const AddData = () => {
     try {
       e.preventDefault();
       const response = await axios.post(
-        "http://localhost:9090/api/create",
+        "http://localhost:8000/api/create/",
         {
           nama: name,
           kelas: kls,
