@@ -32,7 +32,7 @@ const AddData = () => {
           withCredentials: true,
         }
       );
-      console.log(response);
+      console.log(response.data.message);
       navigate("/viewData");
     } catch (error) {
       console.log(error);
