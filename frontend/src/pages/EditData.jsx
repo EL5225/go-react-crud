@@ -66,7 +66,7 @@ const EditData = () => {
           onSubmit={update}
           className="flex flex-col justify-center w-[80vw] md:w-[70vw] lg:w-[40vw] py-7 items-center gap-3 rounded-md shadow-md shadow-blue-200 text-[14px] md:text-[15px]"
         >
-          <span className="flex items-center justify-center font-bold brd rounded-lg w-[30vw] md:w-[20vw] lg:w-[10vw] my-5 text-slate-700">
+          <span className="flex items-center justify-center font-bold p-1 rounded-lg w-[30vw] md:w-[20vw] lg:w-[10vw] my-5 text-white bg-green-600">
             Edit Data
           </span>
           <div className="flex flex-col">
