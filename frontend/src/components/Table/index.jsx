@@ -71,15 +71,15 @@ const Table = () => {
                   <td className="flex justify-evenly items-center text-center p-5 gap-2 mx-2">
                     <Link
                       to={`/editData/${users.id}`}
-                      className=" bg-green-500 rounded-md w-[13vw] md:w-[6vw] lg:w-[4vw] hover:bg-green-600 hover:text-slate-200 md:mt-1 lg:mt-0.5"
+                      className=" bg-green-500 rounded-md w-[13vw] md:w-[6vw] lg:w-[5vw] p-1 hover:bg-green-600 hover:text-slate-200 md:mt-1 lg:mt-0.5"
                     >
                       Edit
                     </Link>
                     <button
-                      className="w-[12vw] md:w-[8vw] lg:w-[4vw] bg-red-500 rounded-md hover:bg-red-600 hover:text-slate-200 md:mt-1 lg:mt-0.5"
+                      className="w-[12vw] md:w-[8vw] lg:w-[5vw] bg-red-500 rounded-md p-1 hover:bg-red-600 hover:text-slate-200 md:mt-1 lg:mt-0.5"
                       onClick={() => deleteUsers(users.id)}
                     >
-                      Del
+                      Delete
                     </button>
                   </td>
                 </tr>
