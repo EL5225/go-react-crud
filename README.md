@@ -9,7 +9,7 @@ next step, use this commands :
 Open Terminal
 -------------------
 - `git clone git@github.com:EL5225/go-react-crud.git`
-- `cd backend/ex-go-crud-icc`
+- `cd backend/`
 - `go run main.go`
 
 
