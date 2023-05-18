@@ -1,4 +1,4 @@
-module github.com/RianIhsan/ex-go-crud-icc
+module github.com/RianIhsan/go-react-crud
 
 go 1.18
 
