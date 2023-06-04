@@ -2,7 +2,7 @@
 
 How to use :
 ------------
-first you must create a database called `ex_crud_golang`, then active your apache and mysql server...
+first you must create a database called `ex_crud_golang`, then active your mysql server...
 
 next step, use this commands :
 -----------
